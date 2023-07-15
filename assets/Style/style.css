@@ -70,3 +70,35 @@
     }
 
 }
+
+/*.score{
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 1150px;
+    margin-top: 180px;
+    position:absolute;
+}*/
+
+
+#score{
+
+    text-align:center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "JetBrains Mono NL ExtraBold";
+
+
+}
+
+.scoreboard{
+
+    position: absolute;
+    height: 220px;
+    width: 160px;
+    background-color: white;
+    margin-left: 1150px;
+    margin-top: 25px;
+    background-image: url("../Images/GameOver.jpg");
+    background-size: cover;
+
+}
