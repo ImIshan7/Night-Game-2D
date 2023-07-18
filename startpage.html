@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Night Survivor</title>
+
+    <style>
+
+        .startbody{
+            margin: 0;
+        }
+
+        .startpage{
+
+            width: 100%;
+            height: 100vh;
+            background-image: url("assets/Images/Untitled design (1).png");
+            background-size: cover;
+            background-repeat: repeat-x;
+            overflow-x: hidden;
+            position: absolute;
+        }
+
+        .start_button {
+            top: 40vh;
+            bottom: 8vh;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            padding: 0.9vw 1.8vw;
+            background-color: #0c0c0c;
+            border: 0.15vw solid #fff;
+            color: #fff;
+            border-radius: 2vw;
+            font-size: 1vw;
+            letter-spacing: 0.25vw;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            z-index: 1;
+            text-decoration: none;
+        }
+        .start_button::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .start_button:hover {
+            color: #000;
+            background-color: #ff6d00;
+
+        }
+
+        .start_button:hover::before {
+            left: 0;
+        }
+        .start_button:active{
+            scale: 0.90;
+        }
+
+
+        .name_tag{
+            width: 500px;
+            position: absolute;
+            height: 100px;
+            right: 0;
+            left: 33%;
+
+
+        }
+
+
+        .night{
+            text-align: center;
+            font-weight: bold;
+            font-size: 50px;
+            font-family: "JetBrains Mono ExtraBold";
+            color: #67fffd;
+
+        }
+
+
+
+        .hand0{
+            width: 180px;
+            position: absolute;
+            height: 215px;
+            right: 0;
+            left: 24%;
+            bottom: 415px;
+            background-image: url("assets/Images/giphy.gif");
+            background-size: cover;
+            background-repeat: repeat-x;
+
+        }
+        /*.hand1{
+            width: 180px;
+            position: absolute;
+            height: 210px;
+            right: 0;
+            left: 28%;
+            bottom: 335px;
+            background-image: url("assets/Images/giphy.gif");
+            background-size: cover;
+            background-repeat: repeat-x;
+
+        }*/
+
+
+
+
+
+    </style>
+</head>
+<body class="startbody">
+
+<audio id="soundtrack" src="assets/Audio/start_page.mp3" loop></audio>
+
+
+<div class="startpage">
+
+    <a href="index.html" target="_blank" class="start_button">Start Game</a>
+
+</div>
+
+<div class="name_tag">
+
+    <h1 CLASS="night"> NIGHT SURVIVOR </h1>
+</div>
+
+
+<div class="hand0"></div>
+<!--<div class="hand1"></div>-->
+
+
+
+<script src="/assets/js/jquery-3.6.1.min.js"></script>
+<script src="controller/style.js"></script>
+
+</body>
+</html>
