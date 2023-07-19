@@ -155,11 +155,17 @@ function keyCheck(event){
 var backgroundImagePositionX = 0;
 var moveBackgroundAnimationId = 0;
 
+var score = 0;
+
+
 function moveBackground(){
 
     backgroundImagePositionX = backgroundImagePositionX - 20 ;
 
     document.getElementById("background").style.backgroundPositionX = backgroundImagePositionX + "px";
+
+    score= score + 1;
+    document.getElementById("score").innerHTML = score;
 }
 
 
@@ -203,5 +209,51 @@ function boxAnimation(){
         var currentMarginLeft = getComputedStyle(box).marginLeft;
         var newMarginLeft =parseInt(currentMarginLeft) - 35;
         box.style.marginLeft = newMarginLeft + "px";
+
+        if (newMarginLeft >= -110 & newMarginLeft <= 100){
+
+            if (boyMarginTop > 300){
+                clearInterval(boxAnimationId);
+
+                clearInterval(runAnimationNumber);
+                runAnimationNumber = -1;
+
+                clearInterval(jumpAnimationNumber);
+                jumpAnimationNumber = -1;
+
+                clearInterval(moveBackgroundAnimationId)
+                moveBackgroundAnimationId = -1;
+
+
+               deadAnimationNumber = setInterval(boyDeadAnimation,100);
+
+
+            }
+
+        }
+
     }
 }
+
+deadImageNumber = 1;
+deadAnimationNumber = 0;
+
+
+function boyDeadAnimation(){
+
+    deadImageNumber = deadImageNumber + 1;
+
+    if (deadImageNumber == 11){
+        deadImageNumber = 10;
+
+    }
+
+    boy.src = "./assets/Images/BoyImages/DeadImages/dead("+ deadImageNumber +").png";
+
+}
+
+
+
+
+
+
