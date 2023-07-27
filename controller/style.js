@@ -47,7 +47,7 @@ function runAnimation(){
 
 
 
-/*
+
 function runAnimationStart(){
 
    runAnimationNumber = setInterval(runAnimation,100);
@@ -258,4 +258,4 @@ sound.volume=0.1;
 sound.play();
 
 
-*/
+
