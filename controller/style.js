@@ -236,6 +236,7 @@ function boxAnimation(){
     }
 }
 
+/*
 deadImageNumber = 1;
 deadAnimationNumber = 0;
 
@@ -247,11 +248,26 @@ function boyDeadAnimation(){
     if (deadImageNumber == 11){
         deadImageNumber = 10;
 
+
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("endScore").innerHTML = score;
+
+
+
     }
 
     boy.src = "./assets/Images/BoyImages/DeadImages/dead("+ deadImageNumber +").png";
 
 }
+
+
+function reload(){
+    location.reload();
+}
+*/
+
+
+
 
 var sound=new Audio("./assets/Audio/start_page.mp4")
 sound.volume=0.1;
