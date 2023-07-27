@@ -236,7 +236,7 @@ function boxAnimation(){
     }
 }
 
-/*
+
 deadImageNumber = 1;
 deadAnimationNumber = 0;
 
@@ -264,14 +264,14 @@ function boyDeadAnimation(){
 function reload(){
     location.reload();
 }
-*/
 
 
 
 
-var sound=new Audio("./assets/Audio/start_page.mp4")
+
+/*var sound=new Audio("./assets/Audio/start_page.mp4")
 sound.volume=0.1;
-sound.play();
+sound.play();*/
 
 
 
